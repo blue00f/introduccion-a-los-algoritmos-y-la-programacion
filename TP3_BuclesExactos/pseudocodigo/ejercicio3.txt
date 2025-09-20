@@ -1,0 +1,28 @@
+Inicio
+	Definir i
+	i=0
+	For i<8
+		Escribir "Ingrese el numero: "
+		Leer num
+		i++
+		acumGeneral+=num
+		Si num%2==0
+			acumPares+=num
+		SiNo
+			acumImpares+=num
+		FinSi
+	FinFor
+	promedioGeneral=acumGeneral/8
+	promedioPares=acumPares/8
+	promedioImpares=acumImpares/8
+	
+	Si promedioGeneral>15
+		Escribir "El promedio general es mayor a 15: ", promedioGeneral
+	FinSi
+	Si promedioPares>15
+		Escribir "El promedio de pares es mayor a 15: ", promedioPares
+	FinSi
+	Si promedioImpares>15
+		Escribir "El promedio de impares es mayor a 15: ", promedioImpares
+	FinSi
+Fin

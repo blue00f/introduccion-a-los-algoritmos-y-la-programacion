@@ -1,0 +1,23 @@
+Inicio
+	Definir cantidad
+	Definir i
+	cantidad=10
+	i=0
+	For i<cantidad
+		Escribir "Ingrese un numero: "
+		Leer num
+		Si num>0
+			positivos++
+		SiNo
+			Si num<0
+				negativos++
+			SiNo
+				ceros++
+			FinSi
+		FinSi
+		i++
+	FinFor
+	Mostrar "Cantidad de positivos: ", positivos
+	Mostrar "Cantidad de negativos: ", negativos
+	Mostrar "Cantidad de ceros: ", ceros
+Fin

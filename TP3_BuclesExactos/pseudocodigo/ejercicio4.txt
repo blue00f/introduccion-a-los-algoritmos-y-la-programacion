@@ -1,0 +1,32 @@
+Inicio
+	Definir cantidad
+	Definir i
+	cantidad=15
+	i=0
+	For i<cantidad
+		Escribir "Ingresa el numero: "
+		Leer num
+		Si num>=1 & num<=10
+			rangoUno++
+		SiNo
+			Si num>=11 & num<=20
+				rangoDos++
+			SiNo
+				Si num>=21 & num<=30
+					rangoTres++
+				SiNo
+					rangoCuatro++
+				FinSi
+			FinSi
+		FinSi
+	FinFor
+	porcentajeRangoUno=(rangoUno/cantidad)*100
+	porcentajeRangoDos=(rangoDos/cantidad)*100
+	porcentajeRangoTres=(rangoTres/cantidad)*100
+	porcentajeRangoCuatro=(rangoCuatro/cantidad)*100
+	
+	Escribir "Porcentaje de los numeros entre 1 y 10: ", porcentajeRangoUno
+	Escribir "Porcentaje de los numeros entre 10 y 20: ", porcentajeRangoDos
+	Escribir "Porcentaje de los numeros entre 20 y 30: ", porcentajeRangoTres
+	Escribir "Porcentaje de los numeros mayores a 30: ", porcentajeRangoCuatro
+Fin

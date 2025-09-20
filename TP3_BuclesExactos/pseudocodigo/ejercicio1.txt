@@ -1,0 +1,15 @@
+Inicio
+	Definir cantidad
+	Definir i
+	
+	cantidad=10
+	i=0
+	For i<cantidad
+		Escribir "Ingrese el numero: "
+		Leer num
+		acumulador=acumulador+num
+		i++
+	FinFor
+	promedio=acumulador/cantidad
+	Mostrar "Promedio de numeros: ", promedio
+Fin

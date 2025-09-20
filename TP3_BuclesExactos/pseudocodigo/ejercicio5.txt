@@ -1,0 +1,22 @@
+Inicio
+	Definir cantidad
+	Definir i
+	cantidad=5
+	i=0
+	
+	For i<cantidad
+		Escribir "Patente: "
+		Leer patente
+		Escribir "Monto de la multa: "
+		Leer monto
+		
+		acumTotal+=monto
+		Si monto>40000
+			contMayores++
+			acumMayores+=monto
+		FinSi
+	FinFor
+	porcentajeMayores = acumMayores*100/acumTotal
+	Escribir "Cantidad de montos que superan $40.000: ", acumMayores
+	Escribir "Porcentaje de la suma de los montos mayores a $40.000: ", porcentajeMayores
+Fin
