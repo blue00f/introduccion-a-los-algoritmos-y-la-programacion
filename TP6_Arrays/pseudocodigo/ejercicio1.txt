@@ -1,0 +1,23 @@
+Algoritmo mostrarVectorInvertido(vector[], tamanio)
+Inicio
+	i=tamanio-1
+	Para i>=0
+		Escribir "Elemento [", i+1, "]: ", vector[i]
+		i--
+	FinPara
+Fin
+
+Algoritmo Principal
+Inicio
+	tamanio=15
+	Para i<tamanio
+		Escribir "Elemento [", i+1, "]: "
+		Leer elementos[i]
+		acumSuma+=elementos[i]
+		acumProducto*=elementos[i]
+		i++
+	FinPara
+	Escribir "Suma de todos los elementos: ", acumSuma
+	Escribir "Producto de todos los elementos: ", acumProducto
+	mostrarVectorInvertido(elementos, tamanio)
+Fin

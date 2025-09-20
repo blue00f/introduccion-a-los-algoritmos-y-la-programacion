@@ -1,0 +1,33 @@
+Algoritmo salidaDeDatos(promedioSueldo, promedioSueldoRangoEdad, promedioEdad)
+Inicio
+	Escribir "Sueldo promedio: " promedioSueldo
+	Escribir "Sueldo promedio de los empleados que tienen entre 23 y 40 años: ", promedioSueldoRangoEdad
+	Escribir "Edad promedio: ", promedioEdad
+Fin
+
+Algoritmo Principal
+Inicio
+	tamanio=10
+	i=0
+	Para i<tamanio
+		Escribir "Ingrese el sueldo del empleado ", i+1, ": "
+		Leer sueldos[i]
+		Escribir "Ingrese la edad del empleado ", i+1, ": "
+		Leer edades[i]
+
+		acumSueldo+=sueldos[i]
+		acumEdad+=edades[i]
+		Si edades[i]>=23 && edades[i]<=40
+			acumSueldoRangoEdad+=sueldos[i]
+			tamanioRangoEdad++
+		FinSi
+		i++
+	FinPara
+	
+	promedioSueldo = acumSueldo/tamanio
+	Si tamanioRangoEdad>0
+		promedioSueldoRangoEdad = acumSueldoRangoEdad/tamanioRangoEdad
+	FinSi
+	promedioEdad = acumEdad/tamanio
+	salidaDeDatos(promedioSueldo, promedioSueldoRangoEdad, promedioEdad)
+Fin

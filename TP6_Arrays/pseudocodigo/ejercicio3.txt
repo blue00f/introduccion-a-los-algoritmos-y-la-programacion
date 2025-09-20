@@ -1,0 +1,82 @@
+Algoritmo obtenerValorPorCategoria(numCategoria)
+Inicio
+	Segun numCategoria Hacer
+		1:
+			Devolver 1500
+		2:
+			Devolver 2000
+		3:
+			Devolver 2500
+		SiNo:
+			Escribir "Categoria no valida"
+			Devolver 0
+	FinSegun
+Fin
+
+Algoritmo salidaDeDatos(contEmpCat1,contEmpCat2,contEmpCat3,acumSueldoCat1,acumSueldoCat2,acumSueldoCat3,promedioSueldos,sueldoMax,nombreSueldoMax)
+Inicio
+	Escribir "---SALIDA DE DATOS---"
+	Escribir "Cantidad de empleados en categoría 1: ", contEmpCat1
+	Escribir "Cantidad de empleados en categoría 2: ", contEmpCat2
+	Escribir "Cantidad de empleados en categoría 3: ", contEmpCat3
+	Escribir "Total de sueldos pagados por categoría 1: ", acumSueldoCat1
+	Escribir "Total de sueldos pagados por categoría 2: ", acumSueldoCat2
+	Escribir "Total de sueldos pagados por categoría 3: ", acumSueldoCat3
+	Escribir "Sueldo promedio general: ", promedioSueldos
+	Escribir "Sueldo máximo: ", sueldoMax, " perteneciente a ", nombreSueldoMax
+Fin
+
+Algoritmo Principal
+Inicio
+	i=0
+	cantidadEmpleados=15
+	
+	Para i<cantidadEmpleados
+		Escribir "---DATOS DEL EMPLEADO ", i, "---"
+		Escribir "Nombre: "
+		Leer nombres[i]
+		Hacer
+			Escribir "Categoria (Elegir entre 1 y 3): "
+			Leer categoria
+			valorCategoria = obtenerValorPorCategoria(categoria)
+
+			Si valorCategoria != 0
+				categorias[i]=categoria
+				sueldos[i]=valorCategoria
+			FinSi	
+		Hasta Que valorCategoria!=0
+
+
+		Escribir "Antigüedad en años: "
+		Leer antiguedades[i]
+
+		sueldos[i] += antiguedades[i]*100
+		i++
+	FinPara
+
+	sueldoMax=sueldos[0]
+	nombreSueldoMax=nombres[0]
+	Para i<cantidadEmpleados
+		Si categorias[i] == 1
+			contEmpCat1++
+			acumSueldoCat1+=sueldos[i]
+		FinSi
+		Si categorias[i] == 2
+			contEmpCat2++
+			acumSueldoCat2+=sueldos[i]
+		FinSi
+		Si categorias[i] == 3
+			contEmpCat3++
+			acumSueldoCat3+=sueldos[i]
+		FinSi
+		
+		Si sueldos[i]>sueldoMax
+			sueldoMax=sueldos[i]
+			nombreSueldoMax=nombres[i]
+		FinSi
+		acumSueldos+=sueldos[i]
+		i++
+	FinPara
+	promedioSueldos = acumSueldos/cantidadEmpleados
+	salidaDeDatos(contEmpCat1,contEmpCat2,contEmpCat3,acumSueldoCat1,acumSueldoCat2,acumSueldoCat3,promedioSueldos,sueldoMax,nombreSueldoMax)
+Fin
