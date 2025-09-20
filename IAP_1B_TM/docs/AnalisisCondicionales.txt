@@ -1,0 +1,13 @@
+Algoritmo Condicionales
+	Escribir "Ingresa el codigo de estado HTTP"
+	Leer codEstado
+	Si codEstado>=200 y codEstado<=299 
+		Imprimir "Codigo OK"
+	SiNo
+		Si codEstado>=400 y codEstado<=499
+			Imprimir "Error en el cliente"
+		SiNo
+			Imprimir "Codigo de estado no definido"
+		FinSi
+	FinSi
+FinAlgoritmo

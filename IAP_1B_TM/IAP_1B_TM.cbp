@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="IAP_1B_TM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/IAP_1B_TM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/IAP_1B_TM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="bubblesort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="busqueda.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cargaDirectaVIDEO.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cargaIndirecta.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cargaIndirectaVIDEO.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="condicionales.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ejemploAlmacen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="practicaParcial1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="practicaParcial2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="punteros.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stringCaracteres.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
