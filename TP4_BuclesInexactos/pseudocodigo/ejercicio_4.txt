@@ -1,0 +1,60 @@
+Inicio
+	numeroFactura=-1
+	banderaUsoFactura1=Falso, banderaUsoFactura2=Falso, banderaUsoFactura3=Falso
+	While numeroFactura!=0
+		Escribir "Factura (1-3) (0 para salir): "
+		Leer numeroFactura
+		Si numeroFactura==0
+			break
+		FinSi
+		Si numeroFactura==1 && banderaUsoFactura1==Verdadero
+			Escribir "Factura ya asignada a un articulo"
+			continue
+		SiNo
+			Si numeroFactura==2 && banderaUsoFactura2==Verdadero
+				Escribir "Factura ya asignada a un articulo"
+				continue
+			SiNo
+				Si numeroFactura==3 && banderaUsoFactura3==Verdadero
+					Escribir "Factura ya asignada a un articulo"
+					continue
+				FinSi
+			FinSi
+		FinSi
+		
+		Escribir "FAC", numeroFactura, " - Articulo (1-3): "
+		Leer numeroArticulo
+		Si numeroFactura==1 && banderaUsoFactura1==Falso
+			banderaUsoFactura1=Verdadero
+			Escribir "Cantidad vendida: "
+			Leer cantVendida1
+			Escribir "Precio unitario: "
+			Leer precioUnitario1
+			articuloDeFactura1=numeroArticulo
+		SiNo
+			Si numeroFactura==2 && banderaUsoFactura2==Falso
+				banderaUsoFactura2=Verdadero
+				Escribir "Cantidad vendida: "
+				Leer cantVendida2
+				Escribir "Precio unitario: "
+				Leer precioUnitario2
+				articuloDeFactura2=numeroArticulo
+			SiNo
+				Si numeroFactura==3 && banderaUsoFactura3==Falso
+					banderaUsoFactura3=Verdadero
+					Escribir "Cantidad vendida: "
+					Leer cantVendida3
+					Escribir "Precio unitario: "
+					Leer precioUnitario3
+					articuloDeFactura3=numeroArticulo
+				FinSi
+			FinSi
+		FinSi
+	FinWhile
+	gananciasFactura1=cantVendida1*precioUnitario1
+	gananciasFactura2=cantVendida2*precioUnitario2
+	gananciasFactura3=cantVendida3*precioUnitario3
+	Escribir "Ganancias FAC1-ART", articuloDeFactura1, ": $", gananciasFactura1
+	Escribir "Ganancias FAC2-ART", articuloDeFactura2, ": $", gananciasFactura2
+	Escribir "Ganancias FAC3-ART", articuloDeFactura3, ": $", gananciasFactura3
+Fin

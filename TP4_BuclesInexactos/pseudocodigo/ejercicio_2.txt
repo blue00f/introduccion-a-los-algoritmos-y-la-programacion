@@ -1,0 +1,31 @@
+Inicio
+	Do 
+		Escribir "Numero de factura: "
+		Leer numeroFactura
+	
+		Si numeroFactura==0
+			break
+		FinSi
+
+		Escribir "Importe de factura: "
+		Leer importeFactura
+		suma+=importeFactura
+
+		Si importeFactura>1000 & importeFactura<10000
+			contMiles++
+		SiNo
+			Si importeFactura>10000
+				contDiezMiles++
+			SiNo
+				Si importeFactura>=400 & importeFactura<=700
+					contRango1++
+				FinSi
+			FinSi
+		FinSi
+	While numeroFactura==1
+
+	Escribir "Importe total: ", suma
+	Escribir "Importes que superan $1000: ", contMiles
+	Escribir "Importes que superan $10.000: ", contDiezMiles
+	Escribir "Importes que estan entre $400 y $700: ", contRango1
+Fin

@@ -1,0 +1,27 @@
+Inicio
+	contador=0
+	Do
+		Si contador==0
+			Escribir "Ingresa la primera temperatura: "
+			Leer temperatura
+			temperaturaMayor=temperatura
+			temperaturaMenor=temperatura
+			contador++
+		FinSi
+		
+		Escribir "Ingresa la temperatura (1000 para salir): "
+		Leer temperatura
+		Si temperatura==1000
+			break
+		FinSi
+		Si temperatura>temperaturaMayor
+			temperaturaMayor=temperatura
+		FinSi
+		Si temperatura<temperaturaMenor
+			temperaturaMenor=temperatura
+		FinSi
+	While temperatura != 1000
+	
+	Escribir "Temperatura mayor: ", temperaturaMayor
+	Escribir "Temperatura menor: ", temperaturaMenor
+Fin

@@ -1,0 +1,17 @@
+Inicio
+	Definir opc
+	opc=1
+	
+	While opc==1
+		Escribir "Ingrese el sueldo: "
+		Leer sueldo
+		suma+=sueldo
+		cont++
+		Escribir "Ingresar otro sueldo (1/0): "
+		Leer opc
+	FinWhile
+
+	promedio=suma/cont
+	Escribir "La suma de todos los sueldos es: ", suma
+	Escribir "El promedio de los sueldos es: ", promedio
+Fin

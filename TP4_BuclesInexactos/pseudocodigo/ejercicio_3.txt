@@ -1,0 +1,30 @@
+Inicio
+	Definir opc
+	opc='S'
+	While opc=='S' || opc=='s'
+		Escribir "Ingresa el numero: "
+		Leer numero
+		
+		Si numero>0
+			contPositivos++
+			acumPositivos+=numero
+		SiNo
+			Si numero<0
+				contNegativos++
+				acumNegativos+=numero
+			SiNo
+				contCeros++
+			FinSi
+		FinSi
+		
+		Escribir "Desea ingresar otro numero? (S/N): "
+		Leer opc
+	FinWhile
+	
+	promPositivos=acumPositivos/contPositivos
+	promNegativos=acumNegativos/contNegativos*(-1)
+	
+	Escribir "Promedio de positivos: ", promPositivos
+	Escribir "Promedio de negativos: ", promNegativos
+	Escribir "Cantidad de ceros: ", contCeros
+Fin

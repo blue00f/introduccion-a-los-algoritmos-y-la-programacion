@@ -1,0 +1,35 @@
+Inicio
+	Escribir "Numero de auto: "
+	Leer numAuto
+	Escribir "Tiempo de llegada (en minutos): "
+	Leer tiempo
+	
+	tiempoMax=tiempo
+	tiempoMin=tiempo
+	primerLugar=numAuto
+	ultimoLugar=numAuto
+	
+	Escribir "Desea ingresar otro auto? (S/N): "
+	Leer opc
+	
+	While opc=='S' || opc=='s'
+		Escribir "Numero de auto: "
+		Leer numAuto
+		Escribir "Tiempo de llegada (en minutos): "
+		Leer tiempo
+		
+		Si tiempo>tiempoMax
+			tiempoMax=tiempo
+			ultimoLugar=numAuto
+		FinSi
+		Si tiempo<tiempoMin
+			tiempoMin=tiempo
+			primerLugar=numAuto
+		FinSi
+		
+		Escribir "Desea ingresar otro auto? (S/N): "
+		Leer opc
+	FinWhile
+	Escribir "Primer lugar: ", primerLugar
+	Escribir "Ultimo lugar: ", ultimoLugar
+Fin
