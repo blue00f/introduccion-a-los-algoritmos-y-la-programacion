@@ -1,0 +1,68 @@
+Algoritmo busquedaSecuencial(elementos,cantElementos,numeroBuscado)
+Inicio
+	Para i<cantElementos
+		Si elementos[i]==numeroBuscado
+			Devolver i
+		FinSi
+		i++
+	FinPara
+	Devolver -1
+Fin
+
+Algoritmo busquedaBinaria(elementos,cantElementos,numeroBuscado)
+Inicio
+	sup=cantElementos-1
+	Mientras inf<=sup
+		centro = ((sup-inf)/2)+inf
+		Si elementos[centro]==numeroBuscado
+			Devolver centro
+		SiNo
+			Si numeroBuscado<elementos[centro]
+				sup=centro-1
+			SiNo
+				inf=centro+1
+			FinSi
+		FinSi
+	FinMientras
+Fin
+
+Algoritmo Principal
+Inicio
+	cantidadElementos=15
+	Para i<cantidadElementos
+		Escribir "Ingrese el valor para el elemento", i+1, ": "
+		Leer elementos[i]
+		i++
+	FinPara
+	
+	Escribir "Ingrese el numero a buscar: "
+	Leer numero
+
+	Escribir "--------------------------------------------------"
+	Escribir "Ingrese el metodo para buscar el numero:"
+	Escribir "1. Algoritmo de busqueda secuencial"
+	Escribir "2. Algoritmo de busqueda binaria"
+	Escribir "Opcion: "
+	Leer numMetodo
+	Escribir "--------------------------------------------------"
+
+	Segun(numMetodo) Hacer
+		1:
+			indiceNumeroBuscado=busquedaSecuencial(elementos,cantidadElementos,numero)
+			Si indiceNumeroBuscado!=-1
+				Escribir "Numero: ", numero
+				Escribir "Posicion: ", indiceNumeroBuscado+1
+				Escribir "Iteraciones hechas: ", iteracionesMetodo
+			SiNo
+				Escribir "Numero no encontrado"
+			FinSi
+			
+		2:
+			indiceNumeroBuscado=busquedaBinario(elementos,cantidadElementos,numero)
+			Escribir "Numero: ", numero
+			Escribir "Posicion: ", indiceNumeroBuscado+1
+			Escribir "Iteraciones hechas:, ", iteracionesMetodo
+		SiNo:
+			Escribir "Opcion no valida"
+	FinSegun
+Fin

@@ -1,0 +1,41 @@
+Algoritmo ordenarVector(elementos)
+Inicio
+	Para i<20-1
+		Para j<20-i-1
+			Si elementos[j]<elementos[j+1]
+				aux=elementos[j]
+				elementos[j] = elementos[j+1]
+				elementos[j+1] = aux
+			FinSi
+			j incrementa en uno
+		FinPara
+		i incrementa en uno
+	FinPara
+Fin
+
+Algoritmo mostrarVector(elementos)
+Inicio
+	Para i<20
+		Escribir "vec[", i, "]: ", elementos[i]
+		i incrementa en uno
+	FinPara
+Fin
+
+Algoritmo Principal
+Inicio
+	Para i<20
+		Escribir "Ingresa el numero ", i+1, ": "
+		Leer elementos[i]
+		i incrementa en uno
+	FinPara
+	ordenarVector(elementos)
+	mostrarVector(elementos)
+Fin
+
+
+Aclaraciones para hacer el pseudocodigo:
+en un pseudocodigo no hace falta especificar el tipado, ni si un parametro es puntero, ni si un parametro es un vector.
+Importa que se entienda porque despues se especifica en el codigo y cada lenguaje puede implemnetarlo distinto, como * en puntero o ref en C#.
+
+el paralelogramo se usa cuando asignamos un valor a una variable y no hay operacion matematica
+el rectangulo es para hacer una operacion matematica (ej. i++, j++, acum+=200)
