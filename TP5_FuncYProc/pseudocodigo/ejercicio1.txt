@@ -1,0 +1,59 @@
+Algoritmo infoSueldos(acumSueldo, promedio, sueldoMayor, sueldoMenor, contSueldo)
+Inicio
+	Escribir "Suma totales de sueldos: ", acumSueldo
+	Escribir "Promedio de sueldos: ", promedio
+	Escribir "Sueldo mayor: ", sueldoMayor
+	Escribir "Sueldo menor: ", sueldoMenor
+	Escribir "Sueldos ingresados: ", contSueldo
+Fin
+
+Algoritmo ingresarSueldo()
+Inicio
+	Hacer
+		Escribir "Ingresa el sueldo"
+		Leer sueldo
+	Mientras(sueldo<0)
+	Devolver sueldo
+Fin
+
+Algoritmo calcularSueldoMayor(sueldo, sueldoMay)
+Inicio
+	Si(sueldo>sueldoMay)
+		sueldoMay=sueldo
+	FinSi
+	Devolver sueldoMay
+Fin
+
+Algoritmo calcularSueldoMenor(sueldo, sueldoMen)
+Inicio
+	Si (sueldo<sueldoMen)
+		sueldoMen=sueldo
+	FinSi
+	Devolver sueldoMen
+Fin
+
+Algoritmo Principal
+Inicio
+	opc=1
+	sueldo=ingresarSueldo()
+	sueldoMayor=sueldo
+	sueldoMenor=sueldo
+	acumSueldo+=sueldo
+	contSueldo++
+
+	Mientras(opc==1)
+		sueldo=ingresarSueldo()
+
+		sueldoMayor=calcularSueldoMayor(sueldo, sueldoMayor)
+		sueldoMenor=calcularSueldoMenor(sueldo, sueldoMenor)
+
+		acumSueldo+=sueldo
+		contSueldo++
+
+		Escribir "Ingresar otro sueldo (1-Si/0-No)"
+		Leer opc
+	FinMientras
+
+	promedio=acumSueldo/contSueldo
+	infoSueldos(acumSueldo, promedio, sueldoMayor, sueldoMenor, contSueldo)
+Fin

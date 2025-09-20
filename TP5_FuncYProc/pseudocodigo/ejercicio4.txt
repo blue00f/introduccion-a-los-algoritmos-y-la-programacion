@@ -1,0 +1,43 @@
+Algoritmo calcularGanancia(precio, cantidadVentas)
+Inicio
+	Devolver precio*cantidadVentas
+Fin
+
+
+Algoritmo infoVentas(acumGanancias, acumVentas, numeroProductoMenor, ventaMenor)
+Inicio
+	Escribir "Ganancias totales: ", acumGanancias
+	Escribir "Total de ventas realizadas: ", acumVentas
+	Escribir "Numero de producto menos vendido: ", numeroProductoMenor, " con ", ventaMenor, " ventas"
+Fin
+
+Algoritmo Principal
+Inicio
+	opc=1
+	primeraIteracion=Falso
+	Mientras(opc==1)
+		Escribir "Numero de producto: "
+		Leer numProducto
+		Escribir "Precio de producto: "
+		Leer precioProducto
+		Escribir "Cantidad de ventas del producto: "
+		Leer cantVentasProducto
+			
+		Si(primeraIteracion==Falso)
+			ventaMenor=cantVentasProducto
+			primeraIteracion=Verdadero
+		FinSi
+
+		acumGanancias+=calcularGanancia(precioProducto, cantVentasProducto)
+		acumVentas+=cantVentasProducto
+		
+		Si(cantVentasProducto < ventaMenor)
+			ventaMenor = cantVentasProducto
+			numProductoMenor = numProducto
+		FinSi
+
+		Escribir "Ingresar otro producto (1-Si/0-No):"
+		Leer opc
+	FinMientras
+	infoVentas(acumGanancias, acumVentas, numProductoMenor, ventaMenor)
+Fin

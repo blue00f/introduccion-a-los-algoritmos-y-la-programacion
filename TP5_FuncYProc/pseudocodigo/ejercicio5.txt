@@ -1,0 +1,41 @@
+Algoritmo detectarAguaHirviendo(temperatura)
+Inicio
+	Si temperatura>=100
+		Devolver estaHirviendo=Verdadero
+	SiNo
+		Devolver estaHirviendo=Falso
+	FinSi
+Fin
+
+Algoritmo detectarAguaCongelada(temperatura)
+Inicio
+	Si temperatura<=0
+		Devolver estaCongelada=Verdadero
+	SiNo
+		Devolver estaCongelada=Falso
+	FinSi
+Fin
+
+Algoritmo Principal
+Inicio
+	opc=1
+	Escribir "---Sensor de agua que detecta si el agua hierve o se congela---"
+	Mientras opc==1
+		Escribir "Ingresar temperatura: "
+		Leer temperatura
+		
+		estaHirviendo=detectarAguaHirviendo(temperatura)
+		estaCongelada=detectarAguaCongelada(temperatura)
+
+		Si estaHirviendo==Verdadero
+			Escribir "AGUA HIRVIENDO"
+		FinSi
+		
+		Si estaCongelada==Verdadero
+			Escribir "AGUA CONGELANDO"
+		FinSi
+
+		Escribir "Ingresar otra temperatura (1-Si/0-No): "
+		Leer opcion
+	FinMientras
+Fin

@@ -1,0 +1,60 @@
+Algoritmo sumar(numA, numB)
+Inicio
+	Devolver numA+numB
+Fin
+
+Algoritmo restar(numA, numB)
+Inicio
+	Devolver numA-numB
+Fin
+
+Algoritmo multiplicar(numA, numB)
+Inicio
+	Devolver numA*numB
+Fin
+
+Algoritmo dividir(numA, numB)
+Inicio
+	Si(numB==0)
+		Devolver 0
+	SiNo
+		Devolver numA/numB
+	FinSi
+Fin
+
+Algoritmo menu(opc, numA, numB)
+Inicio
+	Segun opc hacer
+		1:
+			suma=sumar(numA,numB)
+			Escribir "Suma: ", suma
+		2:
+			resta=restar(numA,numB)
+			Escribir "Resta: ", resta
+		3:
+			division=dividir(numA,numB)
+			Si(division==0)
+				Escribir "No se puede dividir por cero"
+			SiNo
+				Escribir "Division: ", division
+			FinSi
+		4:
+			producto=multiplicar(numA,numB)
+			Escribir "Producto: ", producto
+		SiNo:
+			Escribir "Operacion no correcta"
+	FinSegun
+Fin
+
+Algoritmo Principal
+Inicio
+	opc=0
+	Escribir "Ingrese el numero 1: "
+	Leer numA
+	Escribir "Ingrese el numero 2: "
+	Leer numB
+
+	Escribir "Menu de operaciones: 1-Sumar, 2-Restar, 3-Dividir, 4-Multiplicar Opcion: "
+	Leer opc
+	menu(opc, numA, numB)
+Fin

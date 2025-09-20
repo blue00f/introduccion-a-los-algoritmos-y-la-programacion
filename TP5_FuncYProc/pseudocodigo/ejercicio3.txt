@@ -1,0 +1,57 @@
+Algoritmo determinarPar(num)
+Inicio
+	Si(num%2==0)
+		esPar=Verdadero
+	SiNo
+		esPar=Falso
+	FinSi
+	Devolver esPar
+Fin
+
+Algoritmo determinarSigno(num)
+Inicio
+	Si(num>0)
+		esPositivo=Verdadero
+	SiNo
+		esPositivo=Falso
+	FinSi
+	Devolver esPositivo
+Fin
+
+Algoritmo infoNumeros(contPositivos, contNegativos, contPares, contImpares)
+Inicio
+	Escribir "Cantidad de numeros positivos: ", contPositivos
+	Escribir "Cantidad de numeros negativos: ", contNegativos
+	Escribir "Cantidad de numeros pares: ", contPares
+	Escribir "Cantidad de numeros impares: ", contImpares
+Fin
+
+Algoritmo ingresarNumero()
+Inicio
+	Escribir "Ingrese un numero (0 para salir): "
+	Leer numero
+	Devolver numero
+Fin
+
+Algoritmo Principal
+Inicio
+	numero=ingresarNumero()
+	Mientras(numero!=0)
+		esPar = determinarPar(numero)
+		esPositivo = determinarSigno(numero)
+
+		Si(esPar==Verdadero)
+			contPares++
+		SiNo
+			contImpares++
+		FinSi
+		
+		Si(esPositivo==Verdadero)
+			contPositivos++
+		SiNo
+			contNegativos++
+		FinSi
+		numero=ingresarNumero()
+	FinMientras
+	infoNumeros(contPositivos, contNegativos, contPares, contImpares)
+Fin
